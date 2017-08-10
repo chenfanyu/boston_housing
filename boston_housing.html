@@ -13089,7 +13089,9 @@ IsEEimEYhhEJJlAMwzCMSDCBYhiGYUTC/w8WyXj1mlr2QQAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-3---&#22238;&#31572;:0.923">&#38382;&#39064; 3 - &#22238;&#31572;:0.923<a class="anchor-link" href="#&#38382;&#39064;-3---&#22238;&#31572;:0.923">&#182;</a></h3>
+<h3 id="&#38382;&#39064;-3---&#22238;&#31572;:">&#38382;&#39064; 3 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-3---&#22238;&#31572;:">&#182;</a></h3><p>Model has a coefficient of determination, R^2, of 0.923.
+由结果可知，目标变量的平方和中有92.3%的平方和受到自变量的影响。所以此模型成功地描述了目标变量的变化。</p>
+
 </div>
 </div>
 </div>
@@ -14725,10 +14727,10 @@ iEhIUeITEZGQosQnIiIh5f8B6Sg7GRMg4ZgAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#38382;&#39064;-8---&#22238;&#31572;&#65306;">&#38382;&#39064; 8 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-8---&#22238;&#31572;&#65306;">&#182;</a></h3><ol>
-<li>k折交叉验证法是将数据集分成k个子集，每个子集轮流做一次测试集，其余的作为训练集。如此交叉验证重复k次，将k次的平均交叉验证识别率作为结果。 这样做的优点在于，所有的样本都被作为了训练集和测试集，每个样本都被验证了一次。 </li>
-<li></li>
+<li>k折交叉验证法是将训练数据集分成k个子集，每个子集轮流做一次测试集，其余的作为训练集。如此交叉验证重复k次，将k次的平均交叉验证识别率作为结果。 这样做的优点在于，所有的样本都被作为了训练集和测试集，每个样本都被验证了一次。 </li>
+<li>K折交叉验证分割的是训练数据，默认情况下kfold对数据顺序切分</li>
 <li>cv<em>results</em> 输出一个dict，其中包括相关参数的名称以及对应的值。</li>
-<li>网格搜索算法用于系统地遍历多种参数的组合，通过交叉验证来确定最佳效果参数。如果网格搜索时不使用交叉验证则可能使得模型泛化能力无法达到最优。 </li>
+<li>网格搜索算法用于系统地遍历多种参数的组合，通过交叉验证来确定最佳效果参数。交叉验证的好处是(1)可以使用各自的训练和测试数据对模型进行评测，(2) 因为有测试数据，可以检测是否过拟合了.如果不使用交叉验证则可能使得模型泛化能力无法达到最优。 </li>
 </ol>
 
 </div>
@@ -14987,14 +14989,12 @@ Predicted selling price for Client 3&#39;s home: $942,666.67
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-10---&#22238;&#31572;&#65306;">&#38382;&#39064; 10 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-10---&#22238;&#31572;&#65306;">&#182;</a></h3><ol>
-<li><p>Predicted selling price for Client 1's home: $391,183.33</p>
-</li>
-<li><p>Predicted selling price for Client 2's home: $189,123.53</p>
-</li>
-<li><p>Predicted selling price for Client 3's home: $942,666.67</p>
-</li>
-</ol>
+<h3 id="&#38382;&#39064;-10---&#22238;&#31572;&#65306;">&#38382;&#39064; 10 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-10---&#22238;&#31572;&#65306;">&#182;</a></h3><p>预售价格如下：</p>
+
+<pre><code>         1. Predicted selling price for Client 1's home: $391,183.33
+         2. Predicted selling price for Client 2's home: $189,123.53
+         3. Predicted selling price for Client 3's home: $942,666.67</code></pre>
+<p>从房屋的特征值来看，价格合理，房屋内房间的总数越高房价越高；社区贫困指数越低房价越高；学生和老师的比例对房价影响有限。综合对三个特征向量的分析来看，模型预测出的结果是合理的。</p>
 
 </div>
 </div>
@@ -15058,7 +15058,8 @@ Predicted selling price for Client 3&#39;s home: $942,666.67
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;11---&#22238;&#31572;">&#38382;&#39064;11 - &#22238;&#31572;<a class="anchor-link" href="#&#38382;&#39064;11---&#22238;&#31572;">&#182;</a></h3>
+<h3 id="&#38382;&#39064;11---&#22238;&#31572;">&#38382;&#39064;11 - &#22238;&#31572;<a class="anchor-link" href="#&#38382;&#39064;11---&#22238;&#31572;">&#182;</a></h3><p>决定系数0.72， 即目标变量的平方和中有72%的平方和受到自变量的影响。所以此模型比较成功地描述了目标变量的变化。</p>
+
 </div>
 </div>
 </div>
@@ -15131,6 +15132,7 @@ Trial 9: $402,531.82
 Trial 10: $413,700.00
 
 Range in prices: $29,438.89</code></pre>
+<p>10次预测，均值为 $409,245.877 , 价格波动范围与均值比例为 7.1%  从这个比例看，波动范围很小，故此任务这个模型足够健壮</p>
 
 </div>
 </div>
